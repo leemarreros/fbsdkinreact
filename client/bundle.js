@@ -1,0 +1,1 @@
+console.error("Error: Couldn't find preset \"es2015,\" relative to directory \"/Users/steveleec/articles-medium-blog/fbsdkinreact/client\" while parsing file: /Users/steveleec/articles-medium-blog/fbsdkinreact/client/index.js");

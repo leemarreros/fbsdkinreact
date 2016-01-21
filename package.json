@@ -1,0 +1,30 @@
+{
+  "name": "fbsdk",
+  "version": "1.0.0",
+  "description": "How to use Facebook SDK within a React application",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steveleec/fbsdkinreact.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/steveleec/fbsdkinreact/issues"
+  },
+  "homepage": "https://github.com/steveleec/fbsdkinreact#readme",
+  "scripts": {
+    "start": "npm run watchify & npm run browsersync",
+    "watchify": "watchify client/index.js -v -t [ babelify --presets [ es2015, react] ] -o client/bundle.js",
+    "browsersync": "browser-sync start --server client --files 'client/**/*.js', 'client/*.js', 'client/css/*.css'"
+  },
+  "dependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babelify": "^7.2.0",
+    "browser-sync": "^2.11.1",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "watchify": "^3.7.0"
+  }
+}
