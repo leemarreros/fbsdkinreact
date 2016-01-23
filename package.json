@@ -12,10 +12,13 @@
   "bugs": {
     "url": "https://github.com/steveleec/fbsdkinreact/issues"
   },
+  "babel": {
+    "presets": ["react", "es2015"]
+  },
   "homepage": "https://github.com/steveleec/fbsdkinreact#readme",
   "scripts": {
     "start": "npm run watchify & npm run browsersync",
-    "watchify": "watchify client/index.js -v -t [ babelify --presets [ es2015, react] ] -o client/bundle.js",
+    "watchify": "watchify client/index.js -v -t babelify -o client/bundle.js",
     "browsersync": "browser-sync start --server client --files 'client/**/*.js', 'client/*.js', 'client/css/*.css'"
   },
   "dependencies": {
@@ -26,5 +29,8 @@
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
     "watchify": "^3.7.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-es2015-arrow-functions": "^6.4.0"
   }
 }
